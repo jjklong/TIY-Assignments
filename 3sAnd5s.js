@@ -7,3 +7,15 @@ var list = [];
 for (x = 0; x < 1000; x++){
 	list.push(x);
 }
+var threes = function (num3) {
+	return num3 % 3 ===0;
+};
+var only3 = list.filter(threes);
+
+var fives = function (num5) {
+	return num5 % 5 ===0;
+};
+var only5 = list.filter(fives);
+
+var filteredNums = only3.concat(only5);
+console.log(filteredNums.sort());
