@@ -71,7 +71,7 @@ console.log(mypets);
 var dogs = [ 'Kato', 'Nala', 'Boo', 'Chad', 'Chair'];   //call this array 'dogs'
 dogs.splice(3, 2, 'Lloyd');                             //take 'dogs', start before the 3rd index, remove the 2 after it, and add 'Lloyd' to this array
 console.log(dogs);
->[ 'Kato', 'Nala', 'Boo', 'Lloyd' ]
+>[ 'Kato', 'Nala', 'Boo', 'Lloyd' ]											//if you use a negative value, it starts from the back
 
 
 // .shift() - takes away the first element in an array and returns it
