@@ -13,8 +13,8 @@ var years = [
 	 {currentYear: 2016,
 	 birthYear: 1991}
 	];
-	
+
 for (var age = 0; age < years.length; age++){
 	var agePlz = years[age];
-	console.log("They are either " + [agePlz.currentYear - agePlz.birthYear] + " or " + [agePlz.currentYear - agePlz.birthYear + 1]);
+	console.log("They are either " + [agePlz.currentYear - agePlz.birthYear] + " or " + [agePlz.currentYear - agePlz.birthYear - 1]);
 }
