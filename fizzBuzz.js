@@ -21,9 +21,29 @@
 // }
 
 //SECOND                            ONLY SHOWS THE NUMBERS WE WANT TO SEE
-for (var x = 0; x <= 100; x++){
+// for (var x = 1; x <= 100; x++){
+// 	if (x%3!==0)
+// 	if (x%5!==0)
+// 	if (x%15!==0)
+// 		console.log(x);
+// 	if (x%3===0)
+// 		console.log('Fizz');
+// 	if (x%5===0)
+// 		console.log('Buzz');
+// 	else if (x%15===0)
+// 		console.log('FizzBuzz');
+// }
+
+//FINAL
+
+for (var x = 1; x <= 100; x++){
+	if (x%15===0)
+		console.log('FizzBuzz');
+	else if (x%3===0)
+		console.log('Fizz');
+	else if (x%5===0)
+		console.log('Buzz');
 	if (x%3!==0)
 	if (x%5!==0)
-	if (x%15!==0)
 		console.log(x);
 }
