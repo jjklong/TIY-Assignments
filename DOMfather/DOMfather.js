@@ -12,16 +12,31 @@ for (var listi = 0; listi < listarray.length; listi++) {       //go through the 
       listarray[listi].style.color="red";
 }
 
+// Can't get image to add this way :(
+var pic = document.getElementsByClassName('listitem');
+function addClass(el, classNames) {
+   var classes = classNames(el);
 
-//Trying to add a src class to each listitem in order to add image. 
-function addClass(li, listitem) {
-  var classes = classNames(li);
-
-  if (classes.indexOf(li) < 0) {
-    classes.push(listitem);
-    li.setAttribute('src', classes.join(' '));
+  if (classes.indexOf(el) < 0) {
+      classes.push(className);
+    el.setAttribute('src', classes.join(' '));
   }
 }
+
+
+//Trying to add a src class to each listitem in order to add image.
+// function classNames (li) {
+//   return (li.className || '').split(' ');
+// }
+//
+// function addClass(li, listitem) {
+//   var classes = classNames(li);
+//
+//   if (classes.indexOf(li) < 0) {
+//     classes.push(listitem);
+//     li.setAttribute('src', classes.join(' '));
+//   }
+// }
 
 //Didn't add - no src to refer to yet?
 // var pic = document.getElementsById('fullname');
