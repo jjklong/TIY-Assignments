@@ -9,11 +9,43 @@ document.getElementById('food').innerHTML = 'Oreos';
 var listarray = document.getElementsByTagName('li');           //grabs all the li tags and puts them in an array called 'listitem'
 for (var listi = 0; listi < listarray.length; listi++) {       //go through the list array (only as long as the array)
       listarray[listi].setAttribute('class', 'listitem');      //going through each index, assign 'class' and 'listitem' to each one
+      listarray[listi].style.color="red";
 }
 
+//Didn't add - no src to refer to yet?
+// var pic = document.getElementsById('fullname');
+// pic.src = '"https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/000/290/2f5/0d5094f.jpg"';
+
+// This one adds the image to the bottom
+var image = new Image; //create a new image
+image.src = "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/000/290/2f5/0d5094f.jpg"; //add this source
+document.body.appendChild(image); //DOM add the image variable to the end of the body.
+
+
+//fail
+// var listarray = document.getElementsByTagName('li');
+// for (var listi = 0; listi < 6; listi++) {                    //count less than 6 index numbers
+//       listarray[listi].setAttribute('class', 'listitem');    //while running through that block of code in listarray, add the class attribute and call it listitem
+//       listarray[listi].style.color="red";                    //also, do that with the color too - make it red
+//       if (listi > 4){                                        //if th index is more than 4, add this class name??
+//       	function addClass(listi, className) {
+//         var classes = classNames(el);
+//
+//         if (classes.indexOf(listi) < 0) {
+//         	classes.push(className);
+//           listi.setAttribute'src', classes.join('img.png')
+//         }
+//         }
+// }
 
 
 
+
+// COLOR CHANGE ATTEMPT 1//
+// var redcolor = document.getElementByClassName('li');
+// for (var ii = 0; ii < redcolor.length; ii++){
+// 	redcolor[ii].setAttribute('style.color = red');
+// }
 
 // FIRST ITERATE OUTLINE??
 // function addLi() {
