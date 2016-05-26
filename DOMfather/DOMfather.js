@@ -12,6 +12,17 @@ for (var listi = 0; listi < listarray.length; listi++) {       //go through the 
       listarray[listi].style.color="red";
 }
 
+
+//Trying to add a src class to each listitem in order to add image. 
+function addClass(li, listitem) {
+  var classes = classNames(li);
+
+  if (classes.indexOf(li) < 0) {
+    classes.push(listitem);
+    li.setAttribute('src', classes.join(' '));
+  }
+}
+
 //Didn't add - no src to refer to yet?
 // var pic = document.getElementsById('fullname');
 // pic.src = '"https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/000/290/2f5/0d5094f.jpg"';
