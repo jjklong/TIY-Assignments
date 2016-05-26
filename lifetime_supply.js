@@ -20,6 +20,6 @@ var oreosPerDay = 8;
 var totalOreos = [];
 
 var yearsLeft = [maxAge - currentAge];
-var amount = [yearsLeft * oreosPerDay];
+var amount = [yearsLeft * oreosPerDay * 365];
 
-console.log("You will need " + [amount] + " to last you until the ripe old age of " + [yearsLeft] + ".");
+console.log("You will need " + [amount] + " to last you until the ripe old age of " + [maxAge] + ".");
