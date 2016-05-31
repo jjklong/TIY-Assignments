@@ -7,14 +7,30 @@
 // Call that function for each of the supported languages and log the result to make sure it works.
 
 
+function helloWorld(lang) {
+	if (lang === 'fr') {
+		return 'Bonjour tout le monde';
+	}
 
+	else if (lang ==='es') {
+		return 'Hola, Mundo';
+	}
 
-function helloWorld (lan){
-	// document.getElementById('langCode').setAttribute('lang', lan);
-	var En = "en";
-	var Es = "es";
-	var De = "de";
-	console.log(lan + ":" + " " + "Hello, World");
+	else {
+		return 'Hello, World';
+	}
 }
 
-helloWorld("en");
+console.log(helloWorld('en'));
+console.log(helloWorld('fr'));
+console.log(helloWorld('es'));
+//
+// function helloWorld (lan){
+// 	// document.getElementById('langCode').setAttribute('lang', lan);
+// 	var En = "en";
+// 	var Es = "es";
+// 	var De = "de";
+// 	console.log(lan + ":" + " " + "Hello, World");
+// }
+//
+// helloWorld("en");
