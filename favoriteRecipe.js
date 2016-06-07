@@ -12,9 +12,11 @@
 var favRecipe =
 	{title: "Pizza",
 	servings: 2,
-	ingredients: ("cheese", "onions", "bacon", "dough", "pepperoni", "marinara")
+	ingredients: ["cheese", "onions", "bacon", "dough", "pepperoni", "marinara"]
 	};
 
 
 
-console.log(favRecipe["title"]);
+console.log("My favorite food is " + favRecipe["title"] + ".");
+console.log("This serves " + favRecipe["servings"] + ".");
+console.log("You'll need the following ingredients: " + favRecipe.ingredients)
