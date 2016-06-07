@@ -12,10 +12,22 @@ Not allow access to information after a number of attempts.
 * OAuth2 Token (sent in a header)
 * OAuth2 Token (sent as a parameter)
 
-### How do I ask the API for...
+## How do I ask the API for...
 ### The profile information for a specific user?
+You can call a specific user:
+
+    GET /users/:username
+
 ### The repository listing for a specific user?
+To get the public repositories:
+
+    GET /users/:username/repos
+
 ### The recent, public activity for a specific user?
+To get public activity within the past 90 days:
+
+    GET /events
+
 
 ### Is there a limit to the number of requests I can make?
 Yes. 5,000 requests are allowed per hour, however, only 60 unauthenticated requests are allowed per hour.
@@ -27,21 +39,65 @@ Yes. You can extend the limit by providing the app's client ID and secret in the
 You will get an error response.
 
 ### What if there is a lot of data returned?
+An error could pop up if there is too much data and the request timesout.
 
 ### How can I ask for more (or less) data from a request?
+Specify the information you are requesting.
+
 ### How do I know that there is more data available?
+If the request does not return an error.
+
+
 ### What are the endpoints for fetching...
-* the profile data for a user?
-* the organizations a user belongs to?
-* the repositories a user has created?
-* a filtered list of repositories?
-* a sorted list of repositories?
-* public events for a user?
+**the profile data for a user?**
+
+    curl https://api.github.com/users/USERNAME
+
+**the organizations a user belongs to?**
+
+    GET /users/:username/orgs
+
+**the repositories a user has created?**
+
+Using the sort parameter:
+
+    GET /users/:username/repos
+
+**a filtered list of repositories?**
+
+Using the type parameter
+
+**a sorted list of repositories?**
+
+Using the direction parameter.
+
+**public events for a user?**
+
+    GET /users/:username/received_events/public
 
 ### When fetching public events for a user...
 How many results are returned by default?
+
+* 300 total with a fixed page size of 30.
+
 What limitations exist on fetching more results?
+
+* You can only fetch results within the past 90 days.
+
 What is the basic structure of the results?
+
+* Brackets including the parameters and any information nexted within the parent.
+
 What fields are included in each result?
+
+* type, public, repo, actor, org, and create_at
+
 What are the data types for each field?
+
+* repo includes the id, the name and the url
+* actor includes the id, login, gravatar, avatar url, and url
+* org includes the id, login, gravatar, avatar url, and url
+
 What are some of the different values for the type field?
+
+* object or string
