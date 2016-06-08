@@ -7,21 +7,18 @@ var favMoovie = {
 	"duration": "108",
 	"Stars": [" Ryan Reynolds", " Morena Baccarin", " T.J. Miller"]
 	};
-
-console.log(favMoovie.title + " lasts for " + favMoovie.duration + " minutes. " + "Stars:" + favMoovie.Stars + ".");
-
-
-var title = favMoovie.title;
-console.log(title);
-var duration = favMoovie.duration;
-console.log(duration);
-var stars = favMoovie.Stars;
-console.log(stars);
-
-function movie (title, duration, stars) {
-	for (i = 0; i < favMoovie.length; i++) {
+//PRINTS w/o function
+// console.log(favMoovie.title + " lasts for " + favMoovie.duration + " minutes. " + "Stars:" + favMoovie.Stars + ".");
 
 
+// var title = favMoovie.title;
+// console.log(title);
+// var duration = favMoovie.duration;
+// console.log(duration);
+// var stars = favMoovie.Stars;
+// console.log(stars);
 
-	}
+function movie (favMoovie) {
+	console.log(favMoovie.title + " lasts for " + favMoovie.duration + " minutes. " + "Stars:" + favMoovie.Stars + ".");
 }
+movie(favMoovie);
