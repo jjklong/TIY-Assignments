@@ -21,7 +21,6 @@ console.log("My favorite food is " + favRecipe["title"] + ".");
 console.log("This serves " + favRecipe["servings"] + ".");
 console.log("You'll need the following ingredients: ");
 
-//prints each ingredient on a different line
 for (var i = 0; i < favRecipe.ingredients.length; i++) {
-	console.log(favRecipe.ingredients[i]);
+	console.log(" * " + favRecipe.ingredients[i]);
 }
