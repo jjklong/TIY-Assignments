@@ -4,15 +4,19 @@
 // mixUp('dog', 'dinner'): 'dig donner'
 // Look up the JavaScript string reference to find methods which may be useful!
 
-var str = "Visit Microsoft!";
-var res = str.replace("Microsoft", "W3Schools");
 
 function mixUp (one, two){
 	var first = one.slice(1,2);
 	var second = two.slice(1,2);
+
+	// return first + second;
 
 	var replaceOne = one.replace(first, second);
 	var replaceTwo = two.replace(second, first);
 	return replaceOne + ' ' + replaceTwo;
 }
 mixUp('dog', 'cat');
+mixUp('pepsi', 'coke');
+
+
+//reference from http://www.w3schools.com/jsref/jsref_replace.asp
