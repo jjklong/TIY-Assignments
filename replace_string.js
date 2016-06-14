@@ -11,7 +11,8 @@ function mixUp (one, two){
 	var first = one.slice(1,2);
 	var second = two.slice(1,2);
 
-	var replaceOne = one.replace("");
-	return first + second;
+	var replaceOne = one.replace(first, second);
+	var replaceTwo = two.replace(second, first);
+	return replaceOne + ' ' + replaceTwo;
 }
 mixUp('dog', 'cat');
